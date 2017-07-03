@@ -17,6 +17,7 @@ class MainController
       MainScreen.print_menu_options
       command = self.get_command
       validate_command(command)
+      # NOTE this too, suggests maybe command should be an object.
     else
      command
    end
@@ -53,6 +54,7 @@ class MainController
   end
 
   def run
+    # NOTE where is the input and where is the output?
     while self.run_game
       MainScreen.print_title_screen
       MainScreen.print_menu_options

@@ -103,6 +103,7 @@ class Gallows
   end
 
   def self.print_gallows(num_incorrect_guesses)
+    # NOTE Noice
     puts self.gallows[num_incorrect_guesses]
   end
 

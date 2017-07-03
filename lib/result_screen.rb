@@ -1,5 +1,6 @@
 class ResultScreen
 
+# NOTE this is very nice and interesting.
   def initialize()
     #none
   end

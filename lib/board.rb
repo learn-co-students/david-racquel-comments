@@ -1,5 +1,6 @@
 class Board
   attr_accessor :status, :correct_guesses, :incorrect_guesses
+  # NOTE repetition in the word guess suggests another object
   attr_reader :game_controller, :word_object, :guess_limit
 
   def initialize(game_controller, word_object)
@@ -13,14 +14,19 @@ class Board
 
   def word
     self.word_object.word
+    # just return the object not the strin
   end
 
   def word_array
     self.word.split("")
+    # should be in the word object
   end
 
   def check_guess(guess)
+    # NOTE can use if else here
+    # NOTE would abstract this into multiple methods
     while !Guess.valid_letter?(guess)
+
       puts "That is not a letter!"
       guess = Guess.get_guess
     end
@@ -33,10 +39,13 @@ class Board
     else
       self.incorrect_guesses << guess
     end
+
   end
 
   def update_status
+
     self.status.clear
+    # NOTE should status be cleared? - kinda like clearing our database.
     self.word_array.collect do |letter|
       if self.correct_guesses.include?(letter)
         status << letter
@@ -64,10 +73,14 @@ class Board
 
   def guess_limit_reached?
     self.incorrect_guesses.length == self.guess_limit ? true : false
+    # NOTE this is equivalent to
+    # self.incorrect_guesses.length == self.guess_limit
   end
 
   def word_guessed?
     self.status.join.strip == self.word ? true : false
+    # NOTE this is equivalent to
+    # self.status.join.strip == self.word
   end
 
 end

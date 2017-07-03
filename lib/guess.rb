@@ -1,6 +1,7 @@
 # This class is in charge of getting guess from the user and verifying
 # that they are valid
 class Guess
+  # NOTE what other objects would have a relation to guess?
   def initialize
     #none
   end
@@ -11,6 +12,7 @@ class Guess
   end
 
   def self.valid_letter?(guess)
+    # probably do not pass through the guess as an argument
     ("a".."z").to_a.include?(guess)
   end
 

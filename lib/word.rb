@@ -1,6 +1,7 @@
 #<Description of class>
 class Word
   attr_reader :word
+  # NOTE very cool, but wonder if word should have any other methods.
 
   ## Initial Testing Word Library
   # @@library = ["potato", "unicorn", "quixotic", "sweater", "humidity", "mountain", "goldfish", "aquatic", "plebian", "zebra"]

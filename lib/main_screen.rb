@@ -1,5 +1,6 @@
 #The MainScreen class is in charge of storing and printing items for the main screen. No instances should be made of it - all methods are class methods.
 class MainScreen
+  # NOTE very cool class.
   attr_reader :menu_options
 
   def initialize
